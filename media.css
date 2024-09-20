@@ -475,5 +475,19 @@ html {
     .summary-section {
         padding: 15px; /* Adjust this value as needed */
     }
+
+    .parallax .content {
+        font-size: 3em; /* Make the text size responsive */
+        margin: 0 auto; /* Center the content */
+        padding: 0 20px; /* Add some padding */
+        box-sizing: border-box;
+    }
+
+    .image-section img {
+        max-width: 70px; /* Reduce the size of team member images */
+        height: auto; /* Maintain the aspect ratio */
+        margin-bottom: 10px; /* Add space between the main image and small icon */
+        border-radius: 50%; /* Keep them circular */
+    }
 }
 
