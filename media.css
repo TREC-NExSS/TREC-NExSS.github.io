@@ -15,10 +15,6 @@ body, html {
     cursor: pointer;
 }
 
-.info {
-    padding: 12px;
-}
-
 .header-container {
     display: flex;
     align-items: left;
@@ -48,6 +44,10 @@ body, html {
 
 .expanded {
     display: block; /* Or other styles for when expanded */
+}
+
+.info {
+    padding: 12px;
 }
 
 .options-container {
