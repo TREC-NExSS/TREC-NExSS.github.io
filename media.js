@@ -11,12 +11,13 @@ fetch('/options-bar.html')
 
         // Ensure elements exist before adding event listeners
         if (toggleButton && navLinks) {
-            toggleButton.addEventListener('click', function() {
+            toggleButton.addEventListener('click', function () {
                 console.log('Toggle button clicked');
-                navLinks.classList.toggle('active');
+                navLinks.classList.toggle('active');  // Open or close the nav menu
             });
         }
 
+        // Function to adjust the position of the options container
         function adjustOptionsContainer() {
             if (headerContainer && optionsContainer) {
                 const headerHeight = headerContainer.offsetHeight;
@@ -26,17 +27,25 @@ fetch('/options-bar.html')
             }
         }
 
-        // Use event delegation for dropdown buttons
+        // Use event delegation for dropdown buttons and links
         if (optionsContainer) {
+            // Handle dropdown button click
             optionsContainer.addEventListener('click', (event) => {
-                console.log('Options container clicked'); // Debug line
+                console.log('Options container clicked'); // Debugging line
                 if (event.target.matches('.dropdown-button')) {
                     console.log('Dropdown button clicked');
                     const dropdown = event.target.parentElement;
                     dropdown.classList.toggle('active');
                 }
             });
-            
+
+            // Close navLinks when any link is clicked
+            optionsContainer.addEventListener('click', (event) => {
+                if (event.target.matches('a')) {
+                    console.log('Link clicked, closing navigation');
+                    navLinks.classList.remove('active');  // Close the nav menu
+                }
+            });
         }
 
         // Initial adjustment
