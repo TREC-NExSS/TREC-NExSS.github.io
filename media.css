@@ -475,5 +475,14 @@ html {
     .summary-section {
         padding: 15px; /* Adjust this value as needed */
     }
+
+    .parallax-container {
+        background-attachment: scroll; /* Disable parallax on small screens */
+        background-size: contain; /* Ensure the image fits the screen */
+    }
+
+    .content {
+        width: 90%; /* Adjust content width for small screens */
+    }
 }
 
