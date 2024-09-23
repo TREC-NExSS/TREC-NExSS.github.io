@@ -414,11 +414,13 @@ html {
         right: 10px; /* Adjust right position */
     }
 
-    .parallax .content {
-        font-size: 300%;
-        margin: 0 auto; /* Center the content */
-        padding: 0 20px; /* Add some padding */
-        box-sizing: border-box;
+    .parallax {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        margin-top: auto;
+        background-repeat: no-repeat;
+        background-size: cover
     }
 
     /* Image Section */
