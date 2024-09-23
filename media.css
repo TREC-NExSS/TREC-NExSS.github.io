@@ -210,26 +210,29 @@ body, html {
     margin-bottom: 50px;
 }
 
-.parallax {
-    height: 100vh;
-    background-attachment: fixed;
+.parallax, .team-container, .summary-container {
+    background-attachment: fixed; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: relative; 
     text-align: center;
     color: #fff;
     margin-top: auto;
 }
 
-.team-container, .summary-container {
+.parallax {
+    height: 100vh;
+}
+
+/* .team-container, .summary-container {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 20px;
-    color: #fff; /* White text for contrast */
-}
+    color: #fff; 
+} */
 
 .team-container h1 {
     text-align: center;
@@ -412,14 +415,6 @@ html {
         cursor: pointer;
         z-index: 1000; /* Ensure it stays above other content */
         right: 10px; /* Adjust right position */
-    }
-
-    .parallax {
-        width: 100%;
-        text-align: center;
-        color: #fff;
-        margin-top: auto;
-        background-repeat: no-repeat;
     }
 
     /* Image Section */
