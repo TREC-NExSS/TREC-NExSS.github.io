@@ -420,7 +420,7 @@ html {
         color: #fff;
         margin-top: auto;
         background-repeat: no-repeat;
-        background-size: cover
+        background-size: 100vh;
     }
 
     /* Image Section */
