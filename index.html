@@ -6,9 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="media.css">
     <style>
-        .team-container, .summary-container {
+        .team-container, .summary-container, .parallax{
             background-image: url("images/NExSS_poster.jpg");
         }
+        
+        @media (max-width: 998px) {
+            .team-container, .summary-container, .parallax {
+                background-image: url("images/NExSS_poster -phone.jpg");
+            }
+        }
+ 
     </style>
 </head>
 <body>
@@ -20,7 +27,7 @@
     <div id="options-bar"></div>
 
 
-    <div class="parallax" style="background-image: url('images/NExSS_poster.jpg')">
+    <div class="parallax" >
         <div class="content">
             Tracing Rocky Exoplanet Compositions
         </div>
