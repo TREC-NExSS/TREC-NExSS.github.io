@@ -294,7 +294,7 @@ body, html {
 .team-member .info h2 a {
     text-decoration: none;
     color: rgb(255,198,39);
-    margin-right: 10px; /* Space between the name and the icon */
+    margin-right: 10px; 
 }
 
 .team-member .info h2 a:hover {
@@ -460,12 +460,12 @@ html {
         font-size: 1.5em;
         color: #fff;
     }
-    
+/*     
     .team-member .info h2 a {
         text-decoration: none;
         color: rgb(255,198,39);
-        margin-right: 10px; /* Space between the name and the icon */
-    }
+        margin-right: 10px; 
+    } */
     
     .team-member .info h2 a:hover {
         text-decoration: underline;
