@@ -13,9 +13,17 @@
             background-image: url("../images/who-are-we-image.png");
         }
 
-        .team-container {
-            background-image: url("../images/who-are-we-image.png");
+        .summary-section {
+            width: 90%; /* This makes it take up 90% of the screen width */
+            margin: 0 auto; /* Centers the content horizontally */
+            padding: 10px; /* Adds padding on all sides */
+            box-sizing: border-box; /* Ensures padding is included in the total width */
         }
+        
+        .info {
+            text-align: center; /* Centers the text horizontally */
+        }
+        
         .team-member p {
             line-height: 190%;
         }
@@ -29,6 +37,17 @@
 
         }
 
+        .team-member:hover {
+            transform: scale(1.05); /* Slightly increases size */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+            cursor: pointer; /* Shows it's clickable */
+          }
+
+        .member-link {
+            text-decoration: none;
+            color: inherit; /* Ensures the text color doesn't change */
+          }
+
         .team-container .team-member .small-icon {
             display: block;
             border-radius: 0%;
@@ -37,7 +56,82 @@
         .toggle-button {
             border: solid black;
         }
+
+        /* Name and Title Styling */
+    .team-member .info h2 {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0; /* Add spacing below the name */
+        font-size: 1.5em;
+    }
+
+    .team-member .info h2 a {
+        text-decoration: none;
+        color: rgb(255,198,39);
+        margin-right: 10px; /* Space between the name and the icon */
+    }
+
+    .team-member .info h2 a:hover {
+        text-decoration: underline;
+    }
         
+
+        .team-container{
+            background-image: url("../images/who-are-we-image.png");
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            margin: 0 auto; /* Centers the container */
+            max-width: 100%;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap; /* Ensures members wrap to the next line */
+            gap: 20px; /* Adds spacing between members */
+            justify-content: space-between; /* Spreads out team members with space in between */
+            
+        }
+
+        .team-member {
+            flex: 1 1 calc(33.33% - 40px); /* Each member takes up 1/3 of the row */
+            max-width: 32%;
+            box-sizing: border-box;
+            align-items: center;
+            position: relative;
+            margin: 10px; /* Spacing around each member */
+            height: 350px;
+        }
+        .team-member img {
+            width: 100%; /* Makes images responsive */
+            height: auto;
+            border-radius: 30%;
+            max-height: 200px;
+        }
+    
+        .team-member .image-section {
+            margin-bottom: 10px;
+        }
+    
+        .team-member h2, .team-member h3 {
+            margin: 10px 0;
+        }
+    
+        .small-icon {
+            width: 50px;
+            height: auto;
+            margin-top: 10px;
+        }
+
+
+        @media (max-width: 768px) {
+            .team-member {
+                flex: 1 1 calc(95% - 40px); /* Each member takes up 1/3 of the row */
+                max-width: 99%;
+        }
+
+        
+    }
     </style>
 </head>
 <body>
@@ -70,23 +164,28 @@
  
     <!-- Meet the Team Section -->
     <div class="team-container">
-        <!-- Team Member 1 -->
         <div class="team-member">
-            <!-- Image Section (Main Image and Small Icon) -->
-            <div class="image-section">
-                <img src="../images/dr.-desch.JPEG" alt="Prof. Steven Desch">
-                <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon">
-            </div>
             
-            <!-- Info Section -->
-            <div class="info">
-                <h2><a href="/pages/People/desch.html">Prof. Steven Desch</a></h2> <!-- People/desch.html-->
-                <h3 class="title">Principal Investigator</h3>
-                <p>Steve Desch, a theoretical astrophysicist, combines meteoritic data with astrophysical modeling to study solar system history and planet formation. His interests include chondrule formation, radionuclide origins, and protoplanetary disk processes. He leads Task 2, modeling element redistribution in protoplanetary disks, and contributes to Task 1, modeling chemical fractionations during molecular cloud core collapse.</p>
-            </div>
+                <div class="image-section">
+                    <img src="../images/dr.-desch.JPEG" alt="Prof. Steven Desch">
+                    <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon">
+                </div>
+                <div class="info"> <!-- Use a single info class -->
+                    <h2><a href="/pages/People/desch.html">Prof. Steven Desch</a></h2> <!-- People/desch.html-->
+                    <h3 class="title">Principal Investigator</h3>
+                </div>
+        
         </div>
+
     
-        <!-- Team Member 2 -->
+          
+
+        
+        
+
+
+
+
         <div class="team-member">
             <div class="image-section">
                 <img src="../images/karabrugman.png" alt="Dr. Kara Brugman">
@@ -96,10 +195,9 @@
                 <h2><a href="/pages/People/brugman.html">Dr. Kara Brugman</a></h2><!---->
                 <h3 class="title">Co-Investigator</h3>
                 <h3 class="title">Task 4 Lead</h3>
-                <p>Kara Brugman is an experimental petrologist studying magma genesis, volatile solubility, and magmatic system timescales on Earth, exoplanets, and solar system bodies. She leads the Task 4 team, conducting experiments on melting curves and bioessential element solubilities for exoplanet compositions, and modeling changes in upper mantle and crust compositions as heat fluxes decline.</p>
             </div>
         </div>
-    
+
         <!-- Team Member 3 -->
         <div class="team-member">
             <div class="image-section">
@@ -107,13 +205,13 @@
                 <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon">
             </div>
             <div class="info">
-                <h2><a href="">Prof. Hilairy Hartnett</a></h2><!-- /pages/People/hartnett.html-->
+                <h2><a href="/pages/People/hartnett.html">Prof. Hilairy Hartnett</a></h2><!-- /pages/People/hartnett.html-->
                 <h3 class="title">Co-Investigator</h3>
-                <h3 class="title"></h3>
+                <h3 class="title">Task 5</h3>
                 <p></p>
             </div>
         </div>
-    
+
         <!-- Team Member 4 -->
         <div class="team-member">
             <div class="image-section">
@@ -124,7 +222,6 @@
                 <h2><a href="/pages/People/jackson.html">Dr. Alan Jackson</a></h2><!-- People/jackson.html-->
                 <h3 class="title">Co-Investigator</h3>
                 <h3 class="title">Tasks 2 & 3</h3>
-                <p>Dr. Jackson, an astronomer and planetary scientist, studies planetary system formation and evolution, focusing on the final stages of terrestrial planet assembly. For Task 3, he conducts SPH simulations of giant impacts to quantify changes in mantle and bulk-planet elemental abundances. He also contributes to Task 2, examining how orbital eccentricity affects pebble accretion rates.</p>
             </div>
         </div>
     
@@ -138,10 +235,9 @@
                 <h2><a href="/pages/People/nittler.html">Prof. Larry Nittler</a></h2>
                 <h3 class="title">Co-Investigator</h3>
                 <h3 class="title">Tasks 2b & 3d</h3>
-                <p>Larry is a cosmochemist and planetary scientist studying star and solar system origins through meteorite analysis and remote sensing. He has led roles in NASA’s Stardust, Genesis, and MESSENGER missions and works on Hayabusa2 and BepiColombo. He won the Alfred O. Nier prize, became a Meteoritical Society fellow, and has Asteroid 5992 Nittler named after him.</p>
             </div>
         </div>
-    
+
         <!-- Team Member 6 -->
         <div class="team-member">
             <div class="image-section">
@@ -149,13 +245,13 @@
                 <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon">
             </div>
             <div class="info">
-                <h2><a href="">Prof. Joseph O'Rourke</a></h2><!-- /pages/People/orourke.html-->
+                <h2><a href="/pages/People/orourke.html">Prof. Joseph O'Rourke</a></h2><!-- /pages/People/orourke.html-->
                 <h3 class="title">Co-Investigator</h3>
                 <h3 class="title"></h3>
                 <p></p>
             </div>
         </div>
-    
+
         <!-- Team Member 7 -->
         <div class="team-member">
             <div class="image-section">
@@ -166,10 +262,9 @@
                 <h2><a href="/pages/People/simon.html">Prof. Molly Simon</a></h2>
                 <h3 class="title">Co-Investigator</h3>
                 <h3 class="title">Task 5</h3>
-                <p>Dr. Molly Simon’s research focuses on using citizen science to provide data-rich experiences for undergraduate students both in-person and online. She also assesses the effectiveness of new active learning strategies designed to enhance student retention in college-level astronomy and planetary science courses.</p>
             </div>
         </div>
-    
+
         <!-- Team Member 8 -->
         <div class="team-member">
             <div class="image-section">
@@ -181,10 +276,9 @@
                 <h3 class="title">Co-Investigator</h3>
                 <h3 class="title">Task 4</h3>
                 <p>
-                    Dr. Christy Till is a geologist and professor specializing in magma formation and planetary geology. Her work on volcanoes, subduction zones, and exoplanet magma has earned her several awards, including the 2024 Daly Lecture. She is also dedicated to advancing diversity and inclusion in science, having held leadership roles in related initiatives at ASU and the SZ4D program.</p>
             </div>
         </div>
-    
+
         <!-- Team Member 9 -->
         <div class="team-member">
             <div class="image-section">
@@ -198,7 +292,7 @@
                 <p></p>
             </div>
         </div>
-    
+
         <!-- Team Member 10 -->
         <div class="team-member">
             <div class="image-section">
@@ -209,24 +303,23 @@
                 <h2><a href="/pages/People/kane.html">Prof. Stephen Kane</a></h2>
                 <h3 class="title">Co-Investigator</h3>
                 <h3 class="title"></h3>
-                <p>Stephen Kane is a Professor of Planetary Astrophysics at UC Riverside and a leading expert in exoplanetary science and planetary habitability. He is currently contributing to the TREC/NExSS team, focusing on understanding the divergent evolutionary paths of Venus and Earth within habitable zones.</p>
             </div>
         </div>
-    
+
         <!-- Team Member 11 -->
         <div class="team-member">
             <div class="image-section">
-                <img src="../images/Aaron_T_Wolf_Profile.jpg" alt="Dr. Aaron Wolf">
+                <img src="../images/Aaron_T_Wolf_Profile.png" alt="Dr. Aaron Wolf">
                 <img src="../images/UM.png" alt="Small Icon" class="small-icon">
             </div>
             <div class="info">
-                <h2><a href="">Dr. Aaron Wolf</a></h2><!-- /pages/People/wolf.html-->
+                <h2><a href="/pages/People/wolf.html">Dr. Aaron Wolf</a></h2><!-- /pages/People/wolf.html-->
                 <h3 class="title">Co-Investigator</h3>
                 <h3 class="title"></h3>
                 <p></p>
             </div>
         </div>
-    
+
         <!-- Team Member 12 -->
         <div class="team-member">
             <div class="image-section">
@@ -240,7 +333,7 @@
                 <p></p>
             </div>
         </div>
-    
+
         <!-- Team Member 13 -->
         <div class="team-member">
             <div class="image-section">
@@ -254,9 +347,9 @@
                 <p></p>
             </div>
         </div>
-    
-        <!-- Team Member 14 -->
-        <div class="team-member">
+
+         <!-- Team Member 14 -->
+         <div class="team-member">
             <div class="image-section">
                 <img src="../images/hinkel.webp" alt="Dr. Natalie Hinkel">
                 <img src="../images/SRI.png" alt="Small Icon" class="small-icon">
@@ -268,9 +361,9 @@
                 <p></p>
             </div>
         </div>
-    
-        <!-- Team Member 15-->
-        <div class="team-member">
+
+         <!-- Team Member 15-->
+         <div class="team-member">
             <div class="image-section">
             <img src="../images/maas-zach-profile.jpg" alt="Dr. Zachary Maas">
             <img src="../images/IU.jpg" alt="Small Icon" class="small-icon"></div>
@@ -296,41 +389,51 @@
         </div>
 </div>
 
-        <div class="team-container">
-            <div class="summary-section">
-                <div class="info">
-                     <h2 id="part-2">Students</h2>
-                    </a>
-                </div>
-            </div>
-       
+<div class="team-container">
+    <div class="summary-section">
+        <div class="info">
+             <h2 id="part-2">Students</h2>
+            </a>
+        </div>
+    </div>
 
-            <div class="team-member">
-                <div class="image-section">
-                <img src="../images/jason_lee.jfif" alt="Team Member 16">
-                <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon"></div>
-                <div class="info">
-                    <h2><a href="/pages/People/lee.html">Jason Lee</a>
-                        </h2>
-                        <h3 class="title">Undergraduate Research Aide</h3>
+
+    <div class="team-member">
+        <div class="image-section">
+        <img src="../images/aberham.jpg" alt="Team Member 18">
+        <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon"></div>
+        <div class="info">
+            <h2><a href="/pages/People/aberham.html"> Vito Aberham</a>
+                </h2>
+                <h3 class="title">Graduate Research Aide</h3>
                 <h3 class="title">Task 2</h3>
-                        <p>
-                            Jason is a career pivoter from Astronautical Engineering to Planetary Science. After a decade as an engineer working with astrophysicists and planetary scientists, he discovered his true passion for analyzing spacecraft data. He currently works with Dr. Steve Desch, developing Python wrappers to automate data extraction from his Kyushu Fortran code.</p>
-                    </div>
-            </div>
-
-            <div class="team-member">
-                <div class="image-section">
-                <img src="../images/lee_sorensen.jfif" alt="Team Member 17">
-                <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon"></div>
-                <div class="info">
-                    <h2><a href="/pages/People/sorensen.html">Anneli "Lee" Sorensen</a>
-                        </h2>
-                        <h3 class="title">Undergraduate Research Aide</h3>
-                        <p>Lee is a sophomore Aerospace Engineering student minoring in Astrophysics, driven by a lifelong passion for space and planetary exploration. She currently works with Dr. Steven Desch, developing automated Python wrappers, and is the creator of this website.</p>
-                    </div>
             </div>
     </div>
 
+    <div class="team-member">
+        <div class="image-section">
+        <img src="../images/jason_lee.jfif" alt="Team Member 16">
+        <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon"></div>
+        <div class="info">
+            <h2><a href="/pages/People/lee.html">Jason Lee</a>
+                </h2>
+                <h3 class="title">Undergraduate Research Aide</h3>
+        <h3 class="title">Task 2</h3>
+                <p>
+            </div>
+    </div>
+
+    <div class="team-member">
+        <div class="image-section">
+        <img src="../images/lee_sorensen.jfif" alt="Team Member 17">
+        <img src="../images/asu-logo.png" alt="Small Icon" class="small-icon"></div>
+        <div class="info">
+            <h2><a href="/pages/People/sorensen.html">Anneli "Lee" Sorensen</a>
+                </h2>
+                <h3 class="title">Undergraduate Research Aide</h3>
+            </div>
+    </div>
+
+    </div>
 </body>
 </html>
