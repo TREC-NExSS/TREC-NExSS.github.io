@@ -6,71 +6,103 @@
     <title>Document</title>
     <link rel="stylesheet" href="media.css">
     <style>
-        .team-container, .summary-container, .parallax{
+        .team-container, .summary-container, .parallax {
             background-image: url("images/NExSS_poster.jpg");
         }
-        
+
+      
+
+        /* New CSS for the summary sections */
+        .summary-container {
+            display: flex; /* Use flexbox to arrange child elements */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: space-between; /* Space between sections */
+            padding: 20px; /* Add some padding */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .summary-section {
+            flex: 1; /* Allow the sections to grow equally */
+            min-width: 300px; /* Minimum width for responsiveness */
+            margin: 10px; /* Add space between sections */
+        }
+
+        .summary-container .summary-section .info {
+            max-width: 99%;
+            align-items: center;
+        }
+
+        .summary-container .summary-section img {
+            height: auto;
+            width: fit-content;
+            max-width: 100%;
+            border-radius: 0%;
+            border: solid black;
+            align-items: center;
+        }
+
         @media (max-width: 998px) {
             .team-container, .summary-container, .parallax {
                 background-image: url("images/NExSS_poster -phone.jpg");
             }
+            .summary-section {
+                width: 110%;
+                margin: auto;
+                flex: 1; /* Allow the sections to grow equally */
+                min-width: 300px; /* Minimum width for responsiveness */
+                margin: 10px; /* Add space between sections */
+                
+            }
+
         }
- 
     </style>
 </head>
 <body>
     <script src="media.js"></script>
     <div class="header-container">
         <img src="images/asu.png" alt="Logo" class="logo">
-    </div>    
+    </div>
 
     <div id="options-bar"></div>
 
-
-    <div class="parallax" >
+    <div class="parallax">
         <div class="content">
             Tracing Rocky Exoplanet Compositions
         </div>
     </div>
 
-    </div>
     <div class="summary-container">
         <div class="summary-section">
-            <div class="info">
-                <h2>What is TREC's Goal?</h2> <br>
-                <p> &emsp;&emsp;The TREC (Tracing Rocky Exoplanet Compositions) team is focused on understanding the chemical compositions of rocky exoplanets, particularly their surfaces, to assess climate, habitability, and the potential for life detection. The team aims to trace the origin and evolution of these compositions from the formation of stellar systems to planetary differentiation and surface interactions over time. By analyzing elemental abundances, the research will provide statistical distributions of key elements like Fe, Mg, Si, and volatiles essential for climate and life.
-                    <br>
-                    <br>
-                    &emsp;&emsp;The research plan is divided into five tasks, each addressing different stages of planetary formation and evolution. Tasks include refining elemental catalogs of Sun-like stars, modeling compositional changes during planet formation, and assessing the impact of mantle dynamics on surface compositions. The team will also conduct petrological experiments and develop geophysical codes to model these processes. The project’s results will be synthesized to map out the compositional diversity of rocky exoplanets, aiding in the search for biosignatures and the interpretation of observational data from missions like JWST. The TREC team emphasizes interdisciplinary collaboration, innovation in data acquisition and modeling, and a commitment to training the next generation of scientists. </p>      
-            </div>
-        </div>
-
-        <div class="summary-section">
-            <div class="info">
-                <h2>Our Tasks</h2><br>
-                <p><strong>Task 1:</strong> Add to catalogs of key elemental abundances of Sun-like stars, including rarely measured elements like P, Th, and U. Refine stellar ages to precision < 1 Gyr and test whether solar twin variations reflect accretion of planetary materials.
-                </p> <br>
-                <p><strong>Task 2:</strong> Determine changes in compositions of planetary materials due to radial pebble fluxes and condensation fronts in protoplanetary disks, testing models using meteoritic data.
-
-                </p><br>
-                <p><strong>Task 3:</strong> Assess changes in mantle compositions as elements sequester in cores, removing them from surface interactions. Compile and calculate metal-silicate partition coefficients, model mineralogy and structure of mantles post-magma ocean crystallization, and test models against meteorites and planetary bodies.
-                </p><br>
-                <p><strong>Task 4: </strong>Evaluate compositional changes as upper mantles evolve, emplace melts on the surface, outgas volatiles, and form crusts. Calculate rates of these processes over time, using coupled thermodynamic and geodynamical models, and conduct petrological experiments for ‘bulk silicate exoplanet’ compositions.
-                </p><br>
-                <p><strong>Task 5: </strong>Integrate results to map out rocky exoplanet mantle and surface compositions as functions of age, mass, and host-star abundances. Lead workshops to gather community input on elemental abundance variations and refine strategies for interdisciplinary research.
-                </p>
-
-            </div>
-        </div>
-
-        <div class="summary-section">
-            <div class="info">
-                <h2>Rationale</h2><br>
-                <p>
-                    &emsp;&emsp;NASA's commitment to the search for life on exoplanets is deeply rooted in strategic initiatives like the 2015 Astrobiology Strategy and the National Academies' 2019 report. The James Webb Space Telescope (JWST) plays a pivotal role in this quest, particularly in its detection of atmospheric CO2 and its ongoing search for oxygen in rocky exoplanet atmospheres. Understanding biosignatures and their broader implications is essential for advancing this research. The TREC team’s work is closely aligned with mission concepts such as HabEx, LUVOIR, and the Origins Space Telescope, contributing significantly to our knowledge in this field.
- </p> 
+            <div class="info" style=" max-width: 95%; margin:auto">
+                <h2>What is TREC's Goal?</h2><br>
+                <p>&emsp;&emsp;The TREC (Tracing Rocky Exoplanet Compositions) team is focused on understanding the chemical compositions of rocky exoplanets, particularly their surfaces, to assess climate, habitability, and the potential for life detection. The team aims to trace the origin and evolution of these compositions from the formation of stellar systems to planetary differentiation and surface interactions over time. By analyzing elemental abundances, the research will provide statistical distributions of key elements like Fe, Mg, Si, and volatiles essential for climate and life.
+                    <br><br>
+                    &emsp;&emsp;The research plan is divided into five tasks, each addressing different stages of planetary formation and evolution. Tasks include refining elemental catalogs of Sun-like stars, modeling compositional changes during planet formation, and assessing the impact of mantle dynamics on surface compositions. The team will also conduct petrological experiments and develop geophysical codes to model these processes. The project’s results will be synthesized to map out the compositional diversity of rocky exoplanets, aiding in the search for biosignatures and the interpretation of observational data from missions like JWST. The TREC team emphasizes interdisciplinary collaboration, innovation in data acquisition and modeling, and a commitment to training the next generation of scientists.</p>
             </div>
         </div>
     </div>
+    <div class = "summary-container">
+        <div class="summary-section">
+            <div class="info" style="line-height: 180%">
+                <h2>Our Tasks</h2><br>
+                <p><strong>Task 1:</strong> Add to catalogs of key elemental abundances of Sun-like stars, including rarely measured elements like P, Th, and U. Refine stellar ages to precision < 1 Gyr and test whether solar twin variations reflect accretion of planetary materials.</p><br>
+                <p><strong>Task 2:</strong> Determine changes in compositions of planetary materials due to radial pebble fluxes and condensation fronts in protoplanetary disks, testing models using meteoritic data.</p><br>
+                <p><strong>Task 3:</strong> Assess changes in mantle compositions as elements sequester in cores, removing them from surface interactions. Compile and calculate metal-silicate partition coefficients, model mineralogy and structure of mantles post-magma ocean crystallization, and test models against meteorites and planetary bodies.</p><br>
+                <p><strong>Task 4:</strong> Evaluate compositional changes as upper mantles evolve, emplace melts on the surface, outgas volatiles, and form crusts. Calculate rates of these processes over time, using coupled thermodynamic and geodynamical models, and conduct petrological experiments for ‘bulk silicate exoplanet’ compositions.</p><br>
+                <p><strong>Task 5:</strong> Integrate results to map out rocky exoplanet mantle and surface compositions as functions of age, mass, and host-star abundances. Lead workshops to gather community input on elemental abundance variations and refine strategies for interdisciplinary research.</p>
+            </div>
+        </div>
+
+
+        <div class="summary-section">
+            <div class="info" style="line-height: 180%">
+                <h2>Rationale</h2> <br>
+                <p>&emsp;&emsp;NASA's commitment to the search for life on exoplanets is deeply rooted in strategic initiatives like the 2015 Astrobiology Strategy and the National Academies' 2019 report. The James Webb Space Telescope (JWST) plays a pivotal role in this quest, particularly in its detection of atmospheric CO2 and its ongoing search for oxygen in rocky exoplanet atmospheres. Understanding biosignatures and their broader implications is essential for advancing this research. The TREC team’s work is closely aligned with mission concepts such as HabEx, LUVOIR, and the Origins Space Telescope, contributing significantly to our knowledge in this field.</p>
+                <br><img src="/images/tasks.png">
+            
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
