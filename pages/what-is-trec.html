@@ -8,11 +8,7 @@
     <title>What is TREC?</title>
     <style>
 
-        .parallax {
-            background-image: url("../images/jwst.png");
-        }
-
-        .team-container, .summary-container {
+        .parallax, .team-container, .summary-container{
             background-image: url("../images/jwst.png");
         }
 
@@ -36,13 +32,15 @@
 
         .summary-section{
             line-height: 190%;
+        }     
+
+        @media (max-width: 998px) {
+            .team-container, .summary-container, .parallax {
+                background-repeat: no-repeat;
+                background-size: fill;
+                background-attachment: scroll;
+            }
         }
-        
-        
-
-        
-
-        
 
     </style>
 </head>
