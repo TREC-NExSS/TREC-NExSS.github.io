@@ -27,6 +27,22 @@ fetch('/options-bar.html')
             }
         }
 
+        // Function to check and correct header position
+        function checkHeaderPosition() {
+            if (headerContainer) {
+                const expectedPosition = 0;  // Expected to be at the top
+                const currentPosition = headerContainer.getBoundingClientRect().top;
+
+                // Correct the header's position if necessary
+                if (currentPosition !== expectedPosition) {
+                    headerContainer.style.position = 'fixed';
+                    headerContainer.style.top = `${expectedPosition}px`;  // Correct position
+                }
+            } else {
+                console.error('Header container not found');
+            }
+        }
+
         // Use event delegation for dropdown buttons and links
         if (optionsContainer) {
             // Handle dropdown button click
@@ -50,9 +66,11 @@ fetch('/options-bar.html')
 
         // Initial adjustment
         adjustOptionsContainer();
+        checkHeaderPosition();  // Check and correct the header position initially
 
-        // Reposition on window resize
+        // Reposition on window resize or scroll
         window.addEventListener('resize', adjustOptionsContainer);
+        window.addEventListener('scroll', checkHeaderPosition);  // Check position on scroll
     })
     .catch(error => {
         console.error('Error fetching options bar:', error);
