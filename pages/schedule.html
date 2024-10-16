@@ -52,6 +52,18 @@
         .team-container, .summary-container, .calendar-container{
             background-image: url("../images/protostar.png");
         }
+
+        h3 a {
+            text-decoration: none;
+            color: rgb(255,198,39);
+            margin-right: 10px; /* Space between the name and the icon */
+        }
+
+        h3:hover {
+            transform: scale(1.05); /* Slightly increases size */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+            cursor: pointer; /* Shows it's clickable */
+          }
     </style>
 </head>
 <body>
@@ -75,6 +87,9 @@
     <!-- Calendar Section -->
     <div class="summary-container">
     <div class="calendar-section">
+            <h3><a href="https://urldefense.com/v3/__https://docs.google.com/spreadsheets/d/1OccmD72lvnvbj5LvoBGaUehcBCiDAjgYJqx2cVkiF7I/edit?usp=sharing__;!!IKRxdwAv5BmarQ!e3SNbvE2xidhl-yR42w2aFZFLdsuaRtcuFo_Bac4xBPoHQWiDMVobJFMCS9DORBp1JcHhJ0O6b5smchGZU3awvxjL6cstvw$">Sign up to speak here</a></h3>
+        </div>
+                <div class ="calendar section">
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FPhoenix&bgcolor=%23ffffff&src=Y185ZWFlYTVlNGJhMTZmYzlkZDdiZDVmOGU5NWFiNTBiMmE0MjcxNjIwODJjNGQwZmNiM2JmNDdkOWU5Nzc3NTM2QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986CB" style="border:solid 1px #777"></iframe>
     </div>
 </div>
