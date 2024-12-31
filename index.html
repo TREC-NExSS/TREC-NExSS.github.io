@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -16,20 +16,27 @@
         .summary-container {
             display: flex; /* Use flexbox to arrange child elements */
             flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            justify-content: space-between; /* Space between sections */
-            padding: 20px; /* Add some padding */
-            align-items: flex-start; /* Align items to the top */
+            justify-content: center; /* Center sections horizontally */
+            padding: 30px; /* Add some padding */
         }
 
         .summary-section {
             flex: 1; /* Allow the sections to grow equally */
             min-width: 300px; /* Minimum width for responsiveness */
+            max-width: 120ch; /* Limit the maximum width */
             margin: 10px; /* Add space between sections */
+            line-height: 250%;
+            text-align: center;
         }
 
+        .summary-section:first-of-type, .summary-section:last-of-type {
+            height: 100%; /* Make all sections the same height */
+}
+
         .summary-container .summary-section .info {
-            max-width: 99%;
+            margin: auto;
             align-items: center;
+            
         }
 
         .summary-container .summary-section img {
@@ -56,18 +63,23 @@
                 background-repeat: no-repeat;
                 background-size: fill;
                 background-attachment: scroll;
+                /*mask-image: radial-gradient(farthest-side, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 100%); 
+                -webkit-mask-image: radial-gradient(farthest-side, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 100%); */
             }
 
+        
         }
     </style>
+    <head>
+        <script src="media.js"></script>
+
+        <div class="header-container">
+            <img src="images/asu.png" alt="Logo" class="logo">
+        </div>
+    <div id="options-bar"></div>
 </head>
 <body>
-    <script src="media.js"></script>
-    <div class="header-container">
-        <img src="images/asu.png" alt="Logo" class="logo">
-    </div>
-
-    <div id="options-bar"></div>
+    
 
     <div class="parallax">
         <div class="content">
@@ -76,8 +88,8 @@
     </div>
 
     <div class="summary-container">
-        <div class="summary-section">
-            <div class="info" style=" max-width: 95%; margin:auto">
+        <div class="summary-section" >
+            <div class="info" style=" max-width: 100ch; align-items:center">
                 <h2>What is TREC's Goal?</h2><br>
                 <p>&emsp;&emsp;The TREC (Tracing Rocky Exoplanet Compositions) team is focused on understanding the chemical compositions of rocky exoplanets, particularly their surfaces, to assess climate, habitability, and the potential for life detection. The team aims to trace the origin and evolution of these compositions from the formation of stellar systems to planetary differentiation and surface interactions over time. By analyzing elemental abundances, the research will provide statistical distributions of key elements like Fe, Mg, Si, and volatiles essential for climate and life.
                     <br><br>
@@ -87,7 +99,7 @@
     </div>
     <div class = "summary-container">
         <div class="summary-section">
-            <div class="info" style="line-height: 180%">
+            <div class="info">
                 <h2>Our Tasks</h2><br>
                 <p><strong>Task 1:</strong> Add to catalogs of key elemental abundances of Sun-like stars, including rarely measured elements like P, Th, and U. Refine stellar ages to precision < 1 Gyr and test whether solar twin variations reflect accretion of planetary materials.</p><br>
                 <p><strong>Task 2:</strong> Determine changes in compositions of planetary materials due to radial pebble fluxes and condensation fronts in protoplanetary disks, testing models using meteoritic data.</p><br>
@@ -99,7 +111,7 @@
 
 
         <div class="summary-section">
-            <div class="info" style="line-height: 180%">
+            <div class="info" >
                 <h2>Rationale</h2> <br>
                 <p>&emsp;&emsp;NASA's commitment to the search for life on exoplanets is deeply rooted in strategic initiatives like the 2015 Astrobiology Strategy and the National Academies' 2019 report. The James Webb Space Telescope (JWST) plays a pivotal role in this quest, particularly in its detection of atmospheric CO2 and its ongoing search for oxygen in rocky exoplanet atmospheres. Understanding biosignatures and their broader implications is essential for advancing this research. The TREC team’s work is closely aligned with mission concepts such as HabEx, LUVOIR, and the Origins Space Telescope, contributing significantly to our knowledge in this field.</p>
                 <br><img src="/images/tasks.png">
