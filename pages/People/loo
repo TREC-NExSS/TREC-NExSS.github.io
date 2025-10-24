@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../media.css">
+    <script src="../../media.js"></script>
+    <title>Meet the Team</title>
+    <style>
+        /* Parallax Section */
+        .parallax {
+            background-image: url("../../images/who-are-we-image.png");
+        }
+
+        .team-container {
+            background-image: url("../../images/who-are-we-image.png");
+        }
+
+        .team-container p{
+            line-height: 200%;
+        }
+        .team-container h4{
+            line-height: 60%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<div class="header-container">
+    <img src="../../images/asu.png" alt="Logo" class="logo">
+    <div class="home-button">
+        <a href="../../index.html"><img src="../../images/home_button.png" alt="Home"></a>
+    </div>
+</div>
+
+<div id="options-bar"></div>
+
+    <!-- Parallax Section -->
+    <div class="parallax">
+        <div class="content">
+            Meet the Team
+        </div>
+    </div>
+
+    <!-- Meet the Team Section -->
+    <div class="team-container">
+        <div class="team-member">
+            <div class="image-section">
+            <img src="../../images/Bri_Loo.png" alt="Team Member 19">
+            <img src="../../images/asu-logo.png" alt="Small Icon" class="small-icon"></div>
+            <div class="info">
+                <h2><a href="">Brianna Loo</a>
+                    </h2>
+                    <h3 class="title">Undergraduate Research Aide</h3>
+                    <p>&emsp;&emsp;Brianna Loo is an undergraduate student at Arizona State University, studying Environmental Engineering. While her studies focus on Earth’s environment and chemical processes, she has a special interest in the habitability of other planets and is involved in ASU’s NExSS-TREC project. Additionally, she contributes to research on water quality and treatment, as well as solutions for Arctic ice melting, to improve humanity’s relationship with the Earth. Brianna plans to pursue an interdisciplinary approach to her career, engineering solutions to environmental problems.</p>
+                </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
